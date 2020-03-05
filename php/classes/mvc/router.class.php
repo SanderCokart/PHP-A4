@@ -16,15 +16,19 @@ class Router
             $this->route = explode("/", $_GET['route']);
         }
         $route = isset($routes[$this->getRoute()]) ? $this->getRoute() : DEFAULT_ROUTE;
-        $controller = "\\controllers\\" . $routes[$route]['controller'];
-        $view = "\\views\\" . $routes[$route]['view'];
-        $this->controller = new $controller(null);
-        $this->controller = new $view($this->controller, null);
+
+        $controller = isset($routes[$route]['controller']) ? "\\controllers\\" .  $routes[$route]['controller'] : null;
+        $view = isset($routes[$route]['view']) ? "\\views\\" .  $routes[$route]['view'] : null;
+        $model = isset($routes[$route]['model']) ? "\\models\\" . $routes[$route]['model'] : null;
+
+        $this->model = isset($model) ? new $model() : null;
+        $this->controller = new $controller($this->model);
+        $this->view = new $view($this->controller, $this->model);
     }
 
     private function getRoute()
     {
-      return count($this->route) > 0 ? $this->route[0] : DEFAULT_ROUTE;
+        return count($this->route) > 0 ? $this->route[0] : DEFAULT_ROUTE;
     }
 
     public function getView()

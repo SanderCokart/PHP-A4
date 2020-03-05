@@ -1,10 +1,10 @@
 #rewriting request to the public folder
-
 RewriteEngine On
 
 RewriteCond %{THE_REQUEST} /public/([^\s?]*) [NC]
 RewriteRule ^ %1 [L,NE,R=302]
 
-RewriteRule ^((?!public/).*)$ public/$1 [L,NC]
+RewriteRule ^((?!public/).*)$ public/$1 [QSA,L,NC]
 
 RewriteCond ${REQUEST_URI} !\.(?:css|js|jpe?g|gif|png)$ [NC]
+RewriteRule ^(public\/)([a-zA-Z0-9\-\ \/]*)$ index.php?route=$2 [QSA]

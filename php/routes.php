@@ -14,4 +14,9 @@ $routes = array(
         'view' => 'TestView',
         'controller' => 'TestController',
     ),
+    'resultaat' => array(
+        'view' => 'ResultaatView',
+        'controller' => 'ResultaatController',
+        'model' => 'ResultaatModel',
+    ),
 );

@@ -2,7 +2,9 @@
 
 namespace views;
 
-class TestView extends \mvc\View
+use mvc\View;
+
+class TestView extends View
 {
     public function getHTML()
     {

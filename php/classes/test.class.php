@@ -4,4 +4,3 @@
       return "Dit is de uitvoer van het test-object";
     }
   }
- ?>

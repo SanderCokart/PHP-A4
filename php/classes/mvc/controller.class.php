@@ -4,7 +4,7 @@ namespace mvc;
 
 abstract class Controller implements \mvc\interfaces\Controller
 {
-    private $model;
+    protected $model;
 
     public function __construct($model)
     {
