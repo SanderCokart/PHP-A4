@@ -6,6 +6,13 @@ use controllers\TestController;
 use Exception;
 use views\testView;
 
+/**
+ * Class App
+ * @package mvc
+ * initializes the app
+ * @see Router;
+ * makes use of router class to get its view and show it on the screen with a toString method.
+ */
 class App
 {
     private $router;

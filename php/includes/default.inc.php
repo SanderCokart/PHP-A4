@@ -5,8 +5,8 @@
 
   //function for loading class files inclusive namespaces
   spl_autoload_register(function ($class_name) {
-      $parts = explode("\\", $class_name);
-      require_once LOCAL_ROOT . "php/classes/" . implode("/", $parts) . '.class.php';
+      $parts = explode("/", $class_name);
+      require_once LOCAL_ROOT . "php/classes/" . implode(DIRECTORY_SEPARATOR, $parts) . '.class.php';
   });
 
  ?>

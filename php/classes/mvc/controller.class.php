@@ -2,6 +2,11 @@
 
 namespace mvc;
 
+/**
+ * Class Controller
+ * @package mvc
+ * contains the default functions implemented on every controller
+ */
 abstract class Controller implements \mvc\interfaces\Controller
 {
     protected $model;

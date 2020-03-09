@@ -4,8 +4,15 @@ namespace views;
 
 use mvc\View;
 
+/**
+ * Class FormView
+ * @package views
+ */
 class FormView extends View
 {
+    /**
+     * @return string
+     */
     public function getHTML()
     {
         return '

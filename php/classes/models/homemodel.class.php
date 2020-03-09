@@ -5,10 +5,10 @@ namespace models;
 use mvc\Model;
 
 /**
- * Class ResultaatModel
+ * Class HomeModel
  * @package models
  */
-class ResultaatModel extends Model
+class HomeModel extends Model
 {
 
 }

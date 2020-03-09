@@ -2,6 +2,11 @@
 
 namespace mvc;
 
+/**
+ * Class View
+ * @package mvc
+ * contains the default functions implemented on every view
+ */
 abstract class View implements \mvc\interfaces\View
 {
     protected $controller;
@@ -11,6 +16,5 @@ abstract class View implements \mvc\interfaces\View
     {
         $this->controller = $controller;
         $this->model = $model;
-
     }
 }

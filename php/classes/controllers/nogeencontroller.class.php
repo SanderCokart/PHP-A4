@@ -5,10 +5,10 @@ namespace controllers;
 use mvc\Controller;
 
 /**
- * Class FormController
+ * Class NogEenController
  * @package controllers
  */
-class FormController extends Controller
+class NogEenController extends Controller
 {
 
 }
